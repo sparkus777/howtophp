@@ -60,6 +60,7 @@ class Driver extends Human {
     private $cat_a;
     private $cat_b;
     private $cat_c;
+    private $test_var_for_commit;
 }
     $human1 = new Man();
     $human2 = new Man();
