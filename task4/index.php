@@ -6,7 +6,7 @@ $password = "123123";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
 
-$sql = "SELECT id, title, content FROM blog_slavika.posts";
+$sql = "SELECT id, title, content, date_created FROM blog_slavika.posts";
 $result = mysqli_query($conn, $sql);
 $posts = [];
 
@@ -40,6 +40,9 @@ while ($row = mysqli_fetch_assoc($result)) {
             <h5 class="card-header"><?php echo $post['title'] ?></h5>
             <div class="card-body">
                 <p class="card-text"><?php echo $post['content']?></p>
+            </div>
+            <div class="card-footer">
+                <p class="card-text"><?php echo $post['date_created']?></p>
             </div>
         </div>
     <?php } ?>
