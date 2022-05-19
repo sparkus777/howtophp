@@ -6,15 +6,11 @@ $password= "123123";
 // Create connection
 $conn = mysqli_connect($servername, $username, $password);
 
-$sql = "SELECT id, title, content, date_created FROM blog_slavika.posts";
+$sql = "SELECT id, title, content, date_created FROM blog_slavika.posts WHERE id= ". $_GET['id'];
 $result = mysqli_query($conn, $sql);
-$posts = [];
-
-while ($row = mysqli_fetch_assoc($result)) {
-    $posts[] = $row;
-}
+$row = mysqli_fetch_assoc($result);
+var_dump($row);
 ?>
-
 <html>
 <head>
     <title>Task 4</title>
@@ -36,25 +32,20 @@ while ($row = mysqli_fetch_assoc($result)) {
     </div>
 </header>
 <div class="container">
-    <?php if (!empty($_GET['message'])) { ?>
-    <div class="alert alert-success" role="alert">
-        <?php echo $_GET['message']; ?>
-    </div>
-    <?php } ?>
-    <?php foreach ($posts as $post) { ?>
-        <div class="card mt-5 25">
-            <h5 class="card-header"><?php echo $post['title'] ?></h5>
-            <div class="card-body">
-                <p class="card-text"><?php echo $post['content']?></p>
-            </div>
-            <div class="card-footer">
-                <p class="card-text"><?php echo $post['date_created']?></p>
-            </div>
-            <a class="btn btn-danger" href="api/delete.php?id=<?php echo $post['id'] ?>&pussy=get">Удалить</a>
-            <a class="btn btn-warning" href="update_post.php?id=<?php echo $post['id'] ?>">Изменить</a>
-
+    <form action="api/update.php" method="POST">
+        <input type="hidden" name="id" value="<?php echo $row['id'] ?>">
+        <div class="mt-5">
+            <label class="form-label">Title</label>
+            <input name="title" type="text" class="form-control" value = "<?php echo $row['title']?>">
         </div>
-    <?php } ?>
+        <div class="mt-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Content</label>
+            <textarea name="content" class="form-control" rows="3"><?php echo $row['content']?></textarea>
+        </div>
+        <div class="mt-3">
+            <input class="btn btn-primary" type="submit" value="Change">
+        </div>
+    </form>
 </div>
 </body>
 </html>
