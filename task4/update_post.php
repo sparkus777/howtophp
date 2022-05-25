@@ -9,7 +9,6 @@ $conn = mysqli_connect($servername, $username, $password);
 $sql = "SELECT id, title, content, date_created FROM blog_slavika.posts WHERE id= ". $_GET['id'];
 $result = mysqli_query($conn, $sql);
 $row = mysqli_fetch_assoc($result);
-var_dump($row);
 ?>
 <html>
 <head>

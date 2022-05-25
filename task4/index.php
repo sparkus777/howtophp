@@ -49,7 +49,7 @@ while ($row = mysqli_fetch_assoc($result)) {
             <div class="card-footer">
                 <p class="card-text"><?php echo $post['date_created']?></p>
             </div>
-            <a class="btn btn-danger" href="api/delete.php?id=<?php echo $post['id'] ?>&pussy=get">Удалить</a>
+            <a class="btn btn-danger" href="api/delete.php?id=<?php echo $post['id'] ?>">Удалить</a>
             <a class="btn btn-warning" href="update_post.php?id=<?php echo $post['id'] ?>">Изменить</a>
 
         </div>
