@@ -6,18 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<header>
-    <div class="navbar navbar-dark bg-dark shadow-sm">
-        <div class="container d-flex justify-content-start">
-            <a href="index.php?message=from_home" class="navbar-brand d-flex">
-                <strong>Home</strong>
-            </a>
-            <a href="new_post.php" class="navbar-brand d-flex">
-                <strong>Create</strong>
-            </a>
-        </div>
-    </div>
-</header>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/task4/templates/header.php'; ?>
 <div class="container">
     <form action="api/create.php" method="POST">
         <div class="mt-5">

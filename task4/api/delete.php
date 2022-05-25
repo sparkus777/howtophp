@@ -1,10 +1,8 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "123123";
-
-
-$conn = mysqli_connect($servername, $username, $password);
+/**
+ * @var mysqli $conn
+ */
+require $_SERVER['DOCUMENT_ROOT'] . '/task4/db/db_connection.php';
 
 $sql = 'DELETE FROM `blog_slavika`.`posts` WHERE `id` = '. $_GET['id'];
 $result = mysqli_query($conn, $sql);
