@@ -3,8 +3,8 @@
 $servername = "localhost";
 $username = "root";
 $password = "123123";
-var_dump($_POST);
-die;
+
+
 $conn = mysqli_connect($servername, $username, $password);
 
 $sql = "INSERT INTO blog_slavika.posts SET title = '" . $_POST['title'] . "', content = '" . $_POST['content'] . "', date_created = NOW()";

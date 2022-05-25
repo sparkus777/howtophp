@@ -3,7 +3,7 @@ $servername = "localhost";
 $username = "root";
 $password = "123123";
 
-var_dump($_GET);die;
+
 $conn = mysqli_connect($servername, $username, $password);
 
 $sql = 'DELETE FROM `blog_slavika`.`posts` WHERE `id` = '. $_GET['id'];

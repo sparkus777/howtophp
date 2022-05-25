@@ -14,7 +14,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $posts[] = $row;
 }
 ?>
-
 <html>
 <head>
     <title>Task 4</title>
