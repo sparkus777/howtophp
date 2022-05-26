@@ -6,7 +6,9 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/task4/db/db_connection.php';?>
 <?php require $_SERVER['DOCUMENT_ROOT'] . '/task4/templates/header.php'; ?>
+
 <div class="container">
     <form action="api/create.php" method="POST">
         <div class="mt-5">

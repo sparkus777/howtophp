@@ -23,6 +23,10 @@
                     <a href="#" class="navbar-brand d-flex">
                         <strong>Hello, <?= getUsernameByIdFromCookie() ?></strong>
                     </a>
+                    <form action="api/logoff.php">
+                    <button href="#"  type="submit">
+                        LOG OFF
+                    </button>
                 <?php } ?>
             </div>
         </div>
