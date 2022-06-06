@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<?php require $_SERVER['DOCUMENT_ROOT'] . '/project/views/header.php'; ?>
 <div class="container">
     <?php foreach ($posts as $post) { ?>
         <div class="card mt-5 25">
