@@ -24,9 +24,10 @@
                         <strong>Hello, <?= getUsernameByIdFromCookie() ?></strong>
                     </a>
                     <form action="api/logoff.php">
-                    <button href="#"  type="submit">
-                        LOG OFF
-                    </button>
+                        <button href="#"  type="submit">
+                            LOG OFF
+                        </button>
+                    </form>
                 <?php } ?>
             </div>
         </div>
