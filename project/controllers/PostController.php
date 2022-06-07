@@ -13,8 +13,7 @@ class PostController extends Controller
         $postModel = new Post;
         $posts = $postModel->getAll();
         return $this->render('posts/index', [
-            'posts' => $posts,
-            'kkk' => 'Just a text!'
+            'posts' => $posts
         ]);
     }
 

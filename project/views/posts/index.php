@@ -20,7 +20,7 @@
             <a class="btn btn-warning" href="update_post.php?id=<?= $post['id'] ?>">Изменить</a>
 
         </div>
-        <?= $kkk ?>
+
     <?php } ?>
 </div>
 </body>
