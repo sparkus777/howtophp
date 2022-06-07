@@ -30,9 +30,9 @@ class PostController extends Controller
     public function create()
     {
         $this->title = 'Создать пост';
-
         // невъебацца логика
         // 1. Отправить создателю блога сообщение на телефон во все мессенджеры
+
         return $this->render('posts/create');
     }
 
