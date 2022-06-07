@@ -17,7 +17,7 @@
             <div class="card-footer">
                 <p class="card-text"><?= $post['date_created']?></p>
             </div>
-            <a class="btn btn-danger" href="api/delete.php?id=<?= $post['id'] ?>">Удалить</a>
+            <a class="btn btn-danger" href="/posts/delete/?id=<?= $post['id'] ?>">Удалить</a>
             <a class="btn btn-warning" href="update_post.php?id=<?= $post['id'] ?>">Изменить</a>
 
         </div>

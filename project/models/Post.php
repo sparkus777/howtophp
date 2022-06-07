@@ -13,4 +13,10 @@
 		{
 			return $this->findMany("SELECT id, title, content, date_created FROM posts");
 		}
+        public function insert(){
+            return $this->insertOne("INSERT INTO blog_slavika.posts SET title = '" . $_POST['title'] . "', content = '" . $_POST['content'] . "', date_created = NOW()");
+        }
+        public function delete(){
+            return $this->deleteOne("DELETE FROM blog_slavika.posts WHERE id = '".$_GET['id']."'");
+        }
 	}

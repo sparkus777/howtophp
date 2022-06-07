@@ -38,6 +38,18 @@ class PostController extends Controller
 
     public function store()
     {
-
+        $this->title = 'insert';
+        $postModel = new Post;
+        $posts = $postModel->insert();
+        header('Location: http://test.od/posts/');
     }
+
+    public function delete()
+    {
+        $this->title = 'delete';
+        $postModel = new Post;
+        $posts = $postModel->delete();
+        header('Location: http://test.od/posts/');
+    }
+
 }
