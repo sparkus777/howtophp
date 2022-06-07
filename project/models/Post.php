@@ -19,4 +19,8 @@
         public function delete(){
             return $this->deleteOne("DELETE FROM blog_slavika.posts WHERE id = '".$_GET['id']."'");
         }
+
+        public function update(){
+            return $this->updateOne("UPDATE blog_slavika.posts SET title = '" . $_POST['title'] . "', content = '" . $_POST['content'] . "', date_created = NOW() WHERE id = '". $_POST['id']."'");
+        }
 	}

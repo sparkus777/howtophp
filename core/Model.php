@@ -33,4 +33,7 @@
         protected function deleteOne($query) {
             $result = mysqli_query(self::$link, $query) or die(mysqli_error(self::$link));
         }
+        protected function updateOne($query) {
+            $result = mysqli_query(self::$link, $query) or die(mysqli_error(self::$link));
+        }
 	}

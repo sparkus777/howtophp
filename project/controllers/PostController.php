@@ -52,4 +52,22 @@ class PostController extends Controller
         header('Location: http://test.od/posts/');
     }
 
+    public function edit($params)
+        {
+    $this->title = 'Один пост';
+    $postModel = new Post;
+    $post = $postModel->getById($params['id']);
+    return $this->render('posts/edit', [
+        'post' => $post
+    ]);
+        }
+
+    public function update()
+    {
+        $this->title = 'update';
+        $postModel = new Post;
+        $posts = $postModel->update();
+        header('Location: http://test.od/posts/');
+    }
+
 }
